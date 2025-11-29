@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muara Mei: Hikayat yang Tersembunyi | Kehidupan Krisis Tragedi 1998</title>
+    <script></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+    <style>
+    body {
+      background-image: url('./img/sejarah.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: scroll;
+      margin: 0;
+    }
+    .navbar {
+      background-color: #1b1b1b;
+    }
+
+    .navbar .nav-link,
+    .navbar-brand {
+      color: white;
+    }
+
+    .navbar .nav-link:hover {
+      color: #FFD700;
+    }
+
+    .content-box {
+      max-width: 1200px;
+      margin: 100px auto 40px auto;
+      background-color: rgba(67, 67, 67, 0.9);
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+    .navbar .dropdown-menu {
+      background-color: #1b1b1b;
+      border: none;
+      border-radius: 0;
+      margin-top: 0;
+    }
+    .navbar .dropdown-item {
+      color: #fff;
+    }
+    .navbar .dropdown-item:hover {
+      background-color: #1b1b1b;
+      color: #fff;
+    }
+    .nav-link:hover {
+      text-decoration: underline;
+    }
+    .navbar-custom .nav-link,
+    .navbar-custom .navbar-brand {
+      color: #ffffff !important;
+    }
+    .nav-item.dropdown.hidden {
+      display: none !important;
+    }
+    .nav-item.dropdown {
+      display: inline-block;
+      white-space: nowrap;
+      transition: width 0.1s ease, opacity 0.5s ease;
+      opacity: 1;
+    }
+    .nav-item.dropdown.disabled {
+      pointer-events: none;
+    }
+    .card-link {
+      text-decoration: none;
+      color: inherit;
+    }
+    .interactive-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .interactive-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+    }
+    .card-img-top {
+      height: 200px;
+      object-fit: cover;
+    }
+    .hover-paragraph {
+      background-color: rgba(255,255,255,0.1);
+      padding: 40px;
+      border-radius: 10px;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+    .hover-paragraph:hover {
+      transform: scale(1.01);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+    }
+    .bold-target,
+    .underline-target,
+    .color-target {
+      transition: all 0.67s ease;
+    }
+
+    .hover-paragraph:hover .bold-target {
+      font-weight: bold;
+    }
+
+    .hover-paragraph:hover .underline-target {
+      text-decoration: underline;
+    }
+
+    .hover-paragraph:hover .color-target {
+      color: #ff6f61;
+    }
+    .footer-solid {
+      background-color: #1b1b1b;
+      color: #fff;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .footer-solid a {
+      color: #ff6f61;
+      text-decoration: none;
+    }
+
+    .footer-solid a:hover {
+      text-decoration: underline;
+    }
+    </style>
+
+    <script>
+      window.addEventListener('scroll', function() {
+        let scrollPos = window.scrollY;
+        document.body.style.backgroundPosition = 'center ' + (scrollPos * 0.3) + 'px';
+      });
+    </script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const section = document.getElementById('section-buttons');
+        const dropdownItem = document.querySelector('.nav-item.dropdown');
+
+        if (!section || !dropdownItem) return;
+
+        const baseWidth = dropdownItem.offsetWidth;
+        dropdownItem.style.width = baseWidth + 'px';
+
+        const fadeRange = 200;
+        const offset = 467;
+
+
+
+        window.addEventListener('scroll', function () {
+          const sectionTop = section.offsetTop;
+          const scrollPos = window.scrollY;
+
+          const distance = (sectionTop - scrollPos) - offset;
+          let progress = distance <= fadeRange ? distance / fadeRange : 1;
+          if (progress < 0) progress = 0;
+
+          dropdownItem.style.opacity = progress;
+          dropdownItem.style.width = (baseWidth * progress) + "px";
+
+          if (progress < 1) {
+            dropdownItem.classList.add('disabled');
+          } else {
+            dropdownItem.classList.remove('disabled');
+          }
+        }, { passive: true });
+      });
+      
+    </script>
+
+  </head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-custom fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <img src="./img/serviam.png" alt="Logo" width="30" height="30" class="d-inline-block align-text-top">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+            aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+        <li class="nav-item">
+          <a class="nav-link active fw-bold" aria-current="page" href="index.html">Beranda</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active fw-bold" href="tentangkami.html">Tentang Kami</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle fw-bold" href="#" role="button"
+             data-bs-toggle="dropdown" aria-expanded="false">
+            Pelajari
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="pkn.html">Hukum dan Tindak Lanjut</a></li>
+            <li><a class="dropdown-item" href="agama.html">Kritikan Pihak yang Meragukan Ketiadaan Trauma</a></li>
+            <li><a class="dropdown-item" href="sejarah.html">Kehidupan Krisis Tragedi 1998</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="daftarpustaka.html"><b>Daftar Pustaka</b></a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="PKWU.html">Produk</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="content-box" style="color:white">
+<!-- Hero Page -->
+ <div class="jumbotron text-white" 
+     style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), 
+            url('./img/heropage4.jpeg') center/cover no-repeat; 
+            min-height: 456px;">
+  <div class="container-fluid">
+    <h1 class="display-1 pt-5 ps-4 mb-1" style="font-family: 'courier', monospace">Muara Mei:</h1>
+    <h1 class="display-1 ps-4" style="font-family: 'courier', monospace">Hikayat Tersembunyi.</h1>
+    <p class="lead fs-2 pt-2 p-1 ms-4" style="text-align: left; font-family: 'courier', monospace">
+      Kehidupan Krisis Tragedi 1998 : Asal-usul Terjadinya Rasisme Orde Baru hingga Masuk Era Reformasi.</p>
+  </div>
+</div>
+
+<div class="container my-5">
+<div class="hover-paragraph p-3 pb-2 my-3">
+  <p class="lead fs-5 p-1 ms-4" style="text-align:justify; font-family: 'Times', serif">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Perlu diketahui bahwa <span class="color-target">rasisme</span> terhadap <span class="underline-target">etnis Tionghoa</span> tidak hanya terjadi pada peristiwa 1998, melainkan peristiwa 1998 menjadi puncaknya. 
+    <span class="color-target">Rasisme sistemik dan legal</span> semenjak <span class="underline-target">Warisan Kolonial</span> hingga <span class="underline-target">Politik Orde Baru</span>. 
+    <span class="color-target">Diskriminasi</span> terhadap warga negara Indonesia Tionghoa tidak dimulai pada tahun 1998, melainkan merupakan pola historis jangka panjang yang dipertahankan <span class="underline-target">pemerintah</span> selama beberapa dekade melalui 
+    <span class="color-target">diskriminasi rasial</span> yang dilembagakan. Akar permasalahan ini bermula dari kebijakan kolonial Belanda, yaitu <span class="underline-target">Devide et Impera</span>, yang membagi masyarakat menjadi tiga kelompok sosial (Eurasia, Timur Asing, dan Pribumi) dengan menggunakan warga negara Tionghoa sebagai perantara untuk menciptakan konflik antara mereka dan penduduk lokal.
+  </p>
+</div>
+<div class="hover-paragraph p-3 pb-2 my-3">
+<p class="lead fs-5 p-1 ms-4" style="text-align:justify; font-family: 'Times', serif">
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Kebijakan <span class="color-target">diskriminasi</span> ini berlanjut setelah Indonesia merdeka hingga mencapai puncaknya pada masa <span class="underline-target">Orde Baru</span>, yaitu tahun 1966 hingga 1998, ketika <span class="underline-target">pemerintah</span> menerapkan kebijakan yang disebut 
+  <span class="underline-target">"Politik Asimilasi Total"</span>. <span class="underline-target">Pemerintah</span> menetapkan kebijakan resmi selama masa tersebut yang mengabaikan <span class="bold-target">hak-hak dasar</span> warga negara Indonesia Tionghoa.
+</p>
+  <div class="container ms-3 mb-4">
+    <ol class="px-3">
+      <li class="lead fs-5 p-1 ms-4" style="text-align:justify; font-family: 'Times', serif">
+        <span class="bold-target">Identitas</span>: <span class="underline-target">Pemerintah</span> memaksa warga negara Tionghoa untuk menggunakan <span class="bold-target">nama Indonesia</span> sementara mereka menghadapi tantangan birokrasi untuk mendapatkan dokumen resmi karena mereka harus menunjukkan 
+        <span class="underline-target">SBKRI (Surat Bukti Kewarganegaraan Republik Indonesia)</span> yang digunakan pejabat untuk mendapatkan suap.
+      </li>
+      <li class="lead fs-5 p-1 ms-4" style="text-align:justify; font-family: 'Times', serif">
+        <span class="bold-target">Pendidikan dan Karier</span>: <span class="underline-target">Pemerintah</span> memberlakukan dua pembatasan utama melalui sistem pendidikan dan karier. 
+        <span class="underline-target">Pemerintah</span> menggunakan sistem kuota tidak resmi untuk membatasi akses mahasiswa ke perguruan tinggi negeri dan mencegah mereka menjadi pegawai negeri sipil atau anggota militer dan polisi. 
+        Kelompok <span class="underline-target">etnis Tionghoa</span> perlu memfokuskan kegiatan ekonomi mereka pada perdagangan dan bisnis swasta untuk mencari nafkah.
+      </li>
+      <li class="lead fs-5 p-1 ms-4" style="text-align:justify; font-family: 'Times', serif">
+        <span class="bold-target">Budaya</span>: Pelarangan total terhadap ekspresi budaya, bahasa Mandarin, dan perayaan agama (Imlek/Cap Go Meh) di ruang publik (<span class="underline-target">Inpres No. 14/1967</span>).
+      </li>
+    </ol>
+  </div>
+</div>
+<div class="hover-paragraph p-3 pb-2 my-3">
+  <p class="lead fs-5 p-1 ms-4" style="text-align:justify; font-family: 'Times', serif">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="underline-target">Tragedi Mei 1998</span> muncul sebagai ledakan <span class="color-target">kekerasan</span> yang bermula dari periode 32 tahun kebijakan <span class="color-target">diskriminatif</span> yang membangun kemarahan publik. Era pasca-Reformasi membawa perubahan progresif melalui 
+    <span class="underline-target">Habibie</span>, <span class="underline-target">Gus Dur</span>, <span class="underline-target">Megawati</span>, <span class="underline-target">SBY</span>, dan <span class="underline-target">Jokowi</span> yang membongkar <span class="color-target">hukum rasial</span> dan mengakhiri 
+    <span class="underline-target">SBKRI</span> untuk menetapkan <span class="bold-target">hak yang sama</span> bagi semua warga negara melalui pemulihan praktik budaya Tionghoa dan akses universal terhadap pendidikan dan jabatan pemerintahan tanpa memandang latar belakang etnis.
+  </p>
+</div>
+<div class="hover-paragraph p-3 pb-2 my-3">
+  <p class="lead fs-5 p-1 ms-4" style="text-align:justify; font-family: 'Times', serif">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pada awal-awal tahun, <span class="underline-target">mahasiswa</span> tetap memegang hubungan karib dengan era <span class="underline-target">Presiden Soeharto</span>. Mereka mempunyai tujuan sama, yaitu untuk menciptakan pemerintahan baru tanpa ada unsur penghapusan hak milik perorangan. Namun, itu berakhir sebaliknya. Sebab banyak kebijakan yang keluar yang membuat amarah mahasiswa meningkat. 
+    Maraknya <span class="color-target">Korupsi, Kolusi, dan Nepotisme (KKN)</span>, aksi mahasiswa yang sering dibubarkan dengan <span class="color-target">kekerasan</span>, dan banyak kasus <span class="color-target">penculikan aktivis 1997–1998</span>. Selain itu, ada penyederhanaan partai yang merugikan masyarakat karena membatasi pilihan, melemahkan oposisi, dan membuat demokrasi tidak berjalan. Kekuasaan jadi terlalu pusat pada tangan <span class="underline-target">pemerintah</span>. Namun karena kegigihan mahasiswa, mereka belajar untuk mendirikan organisasi. Tidak lagi berdasarkan kampus tetapi ideologi. Pada tahap inilah muncul semaian organisasi mahasiswa untuk demonstrasi Mei 1998.
+  </p>
+</div>
+<div class="hover-paragraph p-3 pb-2 my-3">
+  <p class="lead fs-5 p-1 ms-4" style="text-align:justify; font-family: 'Times', serif">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ketegangan meningkat ketika terjadi berbagai tindakan <span class="color-target">represif</span> dan <span class="color-target">pelanggaran HAM</span> yang menimbulkan kemarahan nasional. <span class="color-target">Kerusuhan</span> dan <span class="color-target">ketidakstabilan politik</span> menyebar di banyak daerah, menandai puncak tragedi 1998. Gelombang demonstrasi besar-besaran akhirnya memaksa <span class="underline-target">Soeharto</span> mengundurkan dirinya setelah memimpin selama 32 tahun.
+  </p>
+</div>
+<div class="hover-paragraph p-3 pb-2 my-3">
+  <p class="lead fs-5 p-1 ms-4" style="text-align:justify; font-family: 'Times', serif">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pengunduran diri <span class="underline-target">Soeharto</span> membuka jalan kesempatan untuk memasuki <span class="underline-target">era Reformasi</span>, ditandai oleh upaya memperbaiki sistem politik dan pemerintahan yang <span class="bold-target">demokratis</span> hingga <span class="bold-target">kebebasan pers</span>. Masa ini menjadi titik balik penting dalam sejarah Indonesia, mengubah kehidupan bangsa menjadi lebih teratur.
+  </p>
+</div>
+<div class="hover-paragraph p-3 pb-2 my-3">
+  <p class="lead fs-5 p-1 ms-4" style="text-align:justify; font-family: 'Times', serif">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="color-target">Rasisme</span> yang dilembagakan selama <span class="underline-target">Orde Baru</span> menimbulkan akibat jangka panjang berupa <span class="color-target">trauma kolektif</span> dan rusaknya hubungan antar-etnis. Sebab utama <span class="color-target">diskriminasi</span> ini adalah kebijakan <span class="underline-target">pemerintah</span> yang membatasi <span class="bold-target">hak-hak warga Tionghoa</span>, seperti kewajiban menggunakan <span class="bold-target">nama Indonesia</span>, kesulitan birokrasi dengan <span class="underline-target">SBKRI</span>, serta pelarangan ekspresi budaya. Akibatnya, banyak warga Tionghoa terpaksa memusatkan hidup mereka pada sektor perdagangan karena akses ke pendidikan tinggi dan karier di pemerintahan dibatasi. Kondisi ini memperkuat stereotip bahwa <span class="underline-target">etnis Tionghoa</span> hanya berperan sebagai pedagang, yang kemudian dijadikan alasan untuk menumbuhkan <span class="color-target">kecemburuan sosial</span>. Contoh nyata masalah muncul dalam <span class="underline-target">kerusuhan Mei 1998</span>, ketika sentimen rasial memicu <span class="color-target">penjarahan</span>, <span class="color-target">kekerasan</span>, dan <span class="color-target">penganiayaan</span> terhadap komunitas Tionghoa. Dampak sosial yang ditinggalkan adalah hilangnya rasa aman, kerusakan ekonomi, serta perlunya waktu panjang untuk memulihkan kepercayaan antar kelompok masyarakat.
+  </p>
+</div>
+
+</div>
+
+</div>
+
+<footer class="footer-solid">
+  <div class="container">
+    <h3>Contact Information</h3>
+    <p>Email: <a href="mailto:giowalintukan77@gmail.com">giowalintukan77@gmail.com</a></p>
+    <p>No. HP: +62 811 1300 177</p>
+    <p>
+      <a href="tentangkami.html">Tentang Kami</a> | 
+      <a href="daftarpustaka.html">Daftar Pustaka</a>
+    </p>
+    <div class="container p-5 pe-5 text-center" style="color: white">
+    <p class="lead fs-4 p-1 pt-0" style="font-family: 'Trebuchet MS', Helvetica, sans-serif">
+      ” Menjadi Pemimpin yang Peduli, Kreatif dan Berwawasan Global “
+    </p>
+    </div>
+  </div>
+</footer>
+
+</body>
+
+</html>
