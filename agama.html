@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muara Mei: Hikayat yang Tersembunyi | Kritikan Pihak yang Meragukan Ketiadaan Trauma</title>
+    <script></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+    <style>
+    body {
+      background-image: url('./img/agama\ \(2\).jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: scroll;
+      margin: 0;
+    }
+    .navbar {
+      background-color: #1b1b1b;
+    }
+
+    .navbar .nav-link,
+    .navbar-brand {
+      color: white;
+    }
+
+    .navbar .nav-link:hover {
+      color: #FFD700;
+    }
+
+    .content-box {
+      max-width: 1200px;
+      margin: 100px auto 40px auto;
+      background-color: rgba(67, 67, 67, 0.9);
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+    .navbar .dropdown-menu {
+      background-color: #1b1b1b;
+      border: none;
+      border-radius: 0;
+      margin-top: 0;
+    }
+    .navbar .dropdown-item {
+      color: #fff;
+    }
+    .navbar .dropdown-item:hover {
+      background-color: #1b1b1b;
+      color: #fff;
+    }
+    .nav-link:hover {
+      text-decoration: underline;
+    }
+    .navbar-custom .nav-link,
+    .navbar-custom .navbar-brand {
+      color: #ffffff !important;
+    }
+    .nav-item.dropdown.hidden {
+      display: none !important;
+    }
+    .nav-item.dropdown {
+      display: inline-block;
+      white-space: nowrap;
+      transition: width 0.1s ease, opacity 0.5s ease;
+      opacity: 1;
+    }
+    .nav-item.dropdown.disabled {
+      pointer-events: none;
+    }
+    .card-link {
+      text-decoration: none;
+      color: inherit;
+    }
+    .interactive-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .interactive-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+    }
+    .card-img-top {
+      height: 200px;
+      object-fit: cover;
+    }
+    .hover-paragraph {
+      background-color: rgba(255,255,255,0.1);
+      padding: 40px;
+      border-radius: 10px;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+    .hover-paragraph:hover {
+      transform: scale(1.01);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+    }
+    .bold-target,
+    .underline-target,
+    .color-target {
+      transition: all 0.67s ease;
+    }
+
+    .hover-paragraph:hover .bold-target {
+      font-weight: bold;
+    }
+
+    .hover-paragraph:hover .underline-target {
+      text-decoration: underline;
+    }
+
+    .hover-paragraph:hover .color-target {
+      color: #ff6f61;
+    }
+    .footer-solid {
+      background-color: #1b1b1b;
+      color: #fff;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .footer-solid a {
+      color: #ff6f61;
+      text-decoration: none;
+    }
+
+    .footer-solid a:hover {
+      text-decoration: underline;
+    }
+    </style>
+
+    <script>
+      window.addEventListener('scroll', function() {
+        let scrollPos = window.scrollY;
+        document.body.style.backgroundPosition = 'center ' + (scrollPos * 0.3) + 'px';
+      });
+    </script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const section = document.getElementById('section-buttons');
+        const dropdownItem = document.querySelector('.nav-item.dropdown');
+
+        if (!section || !dropdownItem) return;
+
+        const baseWidth = dropdownItem.offsetWidth;
+        dropdownItem.style.width = baseWidth + 'px';
+
+        const fadeRange = 200;
+        const offset = 467;
+
+
+
+        window.addEventListener('scroll', function () {
+          const sectionTop = section.offsetTop;
+          const scrollPos = window.scrollY;
+
+          const distance = (sectionTop - scrollPos) - offset;
+          let progress = distance <= fadeRange ? distance / fadeRange : 1;
+          if (progress < 0) progress = 0;
+
+          dropdownItem.style.opacity = progress;
+          dropdownItem.style.width = (baseWidth * progress) + "px";
+
+          if (progress < 1) {
+            dropdownItem.classList.add('disabled');
+          } else {
+            dropdownItem.classList.remove('disabled');
+          }
+        }, { passive: true });
+      });
+      
+    </script>
+
+  </head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-custom fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <img src="./img/serviam.png" alt="Logo" width="30" height="30" class="d-inline-block align-text-top">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+            aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+        <li class="nav-item">
+          <a class="nav-link active fw-bold" aria-current="page" href="index.html">Beranda</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active fw-bold" href="tentangkami.html">Tentang Kami</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle fw-bold" href="#" role="button"
+             data-bs-toggle="dropdown" aria-expanded="false">
+            Pelajari
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="pkn.html">Hukum dan Tindak Lanjut</a></li>
+            <li><a class="dropdown-item" href="agama.html">Kritikan Pihak yang Meragukan Ketiadaan Trauma</a></li>
+            <li><a class="dropdown-item" href="sejarah.html">Kehidupan Krisis Tragedi 1998</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="daftarpustaka.html"><b>Daftar Pustaka</b></a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="pkwu.html">Produk</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="content-box" style="color:white">
+<!-- Hero Page -->
+ <div class="jumbotron text-white" 
+     style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), 
+            url('./img/heropage4.jpeg') center/cover no-repeat; 
+            min-height: 456px;">
+  <div class="container-fluid">
+    <h1 class="display-1 pt-5 ps-4 mb-1" style="font-family: 'courier', monospace">Muara Mei:</h1>
+    <h1 class="display-1 ps-4" style="font-family: 'courier', monospace">Hikayat Tersembunyi.</h1>
+    <p class="lead fs-2 pt-2 p-1 ms-4" style="text-align: left; font-family: 'courier', monospace">
+      Kritikan Terhadap Pihak yang Meragukan Ketiadaan Trauma Psikologis Setelah Peristiwa Kerusuhan Tahun 1998.</p>
+  </div>
+</div>
+
+<div class="container my-5">
+  <div class="hover-paragraph p-3 pb-2 my-3">
+    <p class="lead fs-5 p-1 ms-4" style="text-align:justify; font-family: 'Times', serif">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Adanya juga pihak-pihak yang menegaskan pentingnya 
+      <span class="bold-target">kehati-hatian</span> dan 
+      <span class="bold-target">ketelitian</span> dalam menulis sejarah 
+      <span class="underline-target">kerusuhan 13–14 Mei 1998</span> terutama dalam menanggapi perdebatan lama soal isu 
+      <span class="color-target">“perkosaan massal”</span>. Menekankan bahwa penulisan sejarah harus didasarkan pada 
+      <span class="bold-target">fakta-fakta yang telah terverifikasi</span> secara 
+      <span class="underline-target">hukum</span> dan 
+      <span class="underline-target">akademik</span>, bukan hanya 
+      <span class="bold-target">opini</span> atau 
+      <span class="bold-target">narasi</span> yang belum didukung bukti kuat. Pihak yang menentang menyebut penggunaan istilah 
+      <span class="color-target">“massal”</span> sangat sensitif dan harus dikaji secara hati-hati karena data faktualnya tidak pernah konklusif. Walaupun demikian, laporan 
+      <span class="underline-target">Tim Gabungan Pencari Fakta (TGPF)</span> dengan dokumen 
+      <span class="underline-target">“Temuan Tim Gabungan Pencari Fakta Peristiwa Kerusuhan Mei 1998”</span> diemisikan oleh 
+      <span class="underline-target">BJ Habibie</span> yang sudah memuat data lengkap dan spesifik terkait korban.
+    </p>
+  </div>
+  <div class="hover-paragraph p-3 pb-2 my-3">
+    <p class="lead fs-5 p-1 ms-4" style="text-align:justify; font-family: 'Times', serif">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pihak tersebut secara tegas mengecam segala bentuk 
+      <span class="color-target">kekerasan terhadap perempuan</span> dan menolak anggapan bahwa klarifikasi istilah ini berarti mengabaikan penderitaan para korban. 
+      <span class="bold-target">Aktivis perempuan</span> juga menilai ini seperti mencoba untuk 
+      <span class="color-target">memanipulasi</span> dan 
+      <span class="color-target">mengaburkan sejarah</span> yang dialami oleh para korban. Ia menyatakan bahwa 
+      <span class="color-target">kekerasan seksual</span> dan 
+      <span class="color-target">perundungan</span> adalah pelanggaran terhadap 
+      <span class="bold-target">nilai kemanusiaan paling dasar</span>. Pihak ini juga menepis tuduhan bahwa narasi perempuan dihapuskan, justru 
+      <span class="bold-target">perempuan diperkuat perannya</span> dalam narasi terbaru 
+      <span class="underline-target">buku Sejarah Indonesia</span>. Isu yang dimuat di dalam buku mencakup 
+      <span class="bold-target">sejarah organisasi perempuan</span> sejak era 
+      <span class="underline-target">Kebangkitan Nasional</span>, 
+      <span class="bold-target">peran perempuan dalam diplomasi dan perjuangan militer</span>, 
+      <span class="bold-target">upaya penghapusan kekerasan dalam rumah tangga</span>, serta 
+      <span class="bold-target">pemberdayaan perempuan</span> dan 
+      <span class="bold-target">kesetaraan gender</span> dalam kerangka mencapai 
+      <span class="underline-target">Sustainable Development Goals ke-5 (SDGs)</span>.
+    </p>
+  </div>
+  <div class="hover-paragraph p-3 pb-2 my-3">
+    <p class="lead fs-5 p-1 ms-4" style="text-align:justify; font-family: 'Times', serif">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pihak menentang mengingatkan bahwa menyusun sejarah, terutama yang menyangkut 
+      <span class="color-target">luka kolektif bangsa</span> dalam kasus ini, 
+      <span class="underline-target">kerusuhan Mei 1998</span>. Memerlukan pendekatan dengan 
+      <span class="bold-target">kehati-hatian tinggi</span>, 
+      <span class="bold-target">verifikasi ketat</span>, serta 
+      <span class="bold-target">kesadaran penuh</span> akan dampak sosialnya. Sejarah harus ditulis berdasarkan 
+      <span class="bold-target">fakta</span>, bukan 
+      <span class="color-target">fiksi</span> atau 
+      <span class="color-target">tekanan opini</span> semata. Dengan pernyataan ini menandai pentingnya 
+      <span class="bold-target">menghormati berbagai pengalaman</span> yang berbeda dalam catatan sejarah Indonesia agar dapat menjadi 
+      <span class="bold-target">pelajaran bagi generasi mendatang</span> sekaligus menjaga 
+      <span class="bold-target">harmoni bangsa</span>. Jadi menurut pihak-pihak berikut, mereka sangat mengabaikan bahwa hal-hal yang terjadi dalam peristiwa 
+      <span class="underline-target">Mei 1998</span> tidak mempengaruhi kehidupan orang-orang dengan cara apa pun.
+    </p>
+  </div>
+  <div class="hover-paragraph p-3 pb-2 my-3">
+    <p class="lead fs-5 p-1 ms-4" style="text-align:justify; font-family: 'Times', serif">
+    Maka dari itu, perilaku-perilaku yang dapat dilakukan untuk menghindari atas pengulangan peristiwa:
+    </p>
+    <div class="hover-paragraph p-3 pb-2 my-3">
+      <p class="lead fs-5 p-1 ms-4" style="text-align:justify; font-family: 'Times', serif">
+        <span class="bold-target">Solidaritas dan Dukungan Korban (Kasih)</span> : Mendengarkan penderitaan korban, menolak <span class="italic-target">victim-blaming</span> dan memberikan 
+        <span class="bold-target">dukungan psikologis, spiritual, dan material</span> secara langsung sebagai wujud 
+        <span class="bold-target">keberpihakan Kristus</span> pada yang menderita.
+      </p>
+    </div>
+    <div class="hover-paragraph p-3 pb-2 my-3">
+      <p class="lead fs-5 p-1 ms-4" style="text-align:justify; font-family: 'Times', serif">
+        <span class="bold-target">Menuntut Keadilan dan Kebenaran (Kebenaran)</span> : Mendesak pembentukan 
+        <span class="underline-target">pengadilan HAM Ad Hoc</span> dan menuntut 
+        <span class="underline-target">Kejaksaan Agung</span> untuk segera menindaklanjuti dan memproses hukum kasus tersebut. 
+        <span class="bold-target">Keadilan</span> harus ditegakkan sebagai 
+        <span class="bold-target">prasyarat pemulihan</span>.
+      </p>
+    </div>
+        <div class="hover-paragraph p-3 pb-2 my-3">
+      <p class="lead fs-5 p-1 ms-4" style="text-align:justify; font-family: 'Times', serif">
+        <span class="bold-target">Advokasi Politik dan Pemulihan (Tanggung Jawab)</span> : Mendorong 
+        <span class="bold-target">reformasi sektor keamanan</span> dan mendesak 
+        <span class="underline-target">negara</span> untuk segera memberikan 
+        <span class="bold-target">reparasi (kompensasi dan rehabilitasi)</span> yang layak kepada korban. Tindakan ini bertujuan memastikan 
+        <span class="bold-target">pertanggungjawaban struktural</span> dan mencegah 
+        <span class="color-target">pengulangan</span>.
+      </p>
+    </div>
+  </div>
+</div>
+
+</div>
+
+<footer class="footer-solid">
+  <div class="container">
+    <h3>Contact Information</h3>
+    <p>Email: <a href="mailto:giowalintukan77@gmail.com">giowalintukan77@gmail.com</a></p>
+    <p>No. HP: +62 811 1300 177</p>
+    <p>
+      <a href="tentangkami.html">Tentang Kami</a> | 
+      <a href="daftarpustaka.html">Daftar Pustaka</a>
+    </p>
+    <div class="container p-5 pe-5 text-center" style="color: white">
+    <p class="lead fs-4 p-1 pt-0" style="font-family: 'Trebuchet MS', Helvetica, sans-serif">
+      ” Menjadi Pemimpin yang Peduli, Kreatif dan Berwawasan Global “
+    </p>
+    </div>
+  </div>
+</footer>
+
+</body>
+
+</html>

@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muara Mei: Hikayat yang Tersembunyi | Tentang Kami</title>
+    <script></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+    <style>
+    body {
+      background-image: url('./img/bg.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: scroll;
+      margin: 0;
+    }
+    .navbar {
+      background-color: #1b1b1b;
+    }
+
+    .navbar .nav-link,
+    .navbar-brand {
+      color: white;
+    }
+
+    .navbar .nav-link:hover {
+      color: #FFD700;
+    }
+
+    .content-box {
+      max-width: 1200px;
+      margin: 100px auto 40px auto;
+      background-color: rgba(67, 67, 67, 0.9);
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+    .navbar .dropdown-menu {
+      background-color: #1b1b1b;
+      border: none;
+      border-radius: 0;
+      margin-top: 0;
+    }
+    .navbar .dropdown-item {
+      color: #fff;
+    }
+    .navbar .dropdown-item:hover {
+      background-color: #1b1b1b;
+      color: #fff;
+    }
+    .nav-link:hover {
+      text-decoration: underline;
+    }
+    .navbar-custom .nav-link,
+    .navbar-custom .navbar-brand {
+      color: #ffffff !important;
+    }
+    .nav-item.dropdown.hidden {
+      display: none !important;
+    }
+    .nav-item.dropdown {
+      display: inline-block;
+      white-space: nowrap;
+      transition: width 0.1s ease, opacity 0.5s ease;
+      opacity: 1;
+    }
+    .nav-item.dropdown.disabled {
+      pointer-events: none;
+    }
+    .card-link {
+      text-decoration: none;
+      color: inherit;
+    }
+    .interactive-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .interactive-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+    }
+    .card-img-top {
+      height: 200px;
+      object-fit: cover;
+    }
+    .hover-paragraph {
+      background-color: rgba(255,255,255,0.1);
+      padding: 40px;
+      border-radius: 10px;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+    .hover-paragraph:hover {
+      transform: scale(1.01);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+    }
+    .bold-target,
+    .underline-target,
+    .color-target {
+      transition: all 0.67s ease;
+    }
+
+    .hover-paragraph:hover .bold-target {
+      font-weight: bold;
+    }
+
+    .hover-paragraph:hover .underline-target {
+      text-decoration: underline;
+    }
+
+    .hover-paragraph:hover .color-target {
+      color: #ff6f61;
+    }
+    .footer-solid {
+      background-color: #1b1b1b;
+      color: #fff;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .footer-solid a {
+      color: #ff6f61;
+      text-decoration: none;
+    }
+
+    .footer-solid a:hover {
+      text-decoration: underline;
+    }
+    </style>
+
+    <style>
+      body {
+        min-height: 100vh;
+        font-family: Arial, sans-serif;
+      }
+      .card {
+        position: relative;
+        width: 300px;
+        height: 367px;
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        background: #fff;
+        transition: transform 0.3s ease;
+      }
+
+      .card:hover {
+        transform: scale(1.05);
+      }
+
+      .card .background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 1;
+      }
+
+      .card .profile-img {
+        position: absolute;
+        bottom: -50px;
+        left: 50%;
+        transform: translateX(-50%) translateY(0);
+        width: 300px;
+        transition: transform 0.4s ease;
+        z-index: 2;
+      }
+
+      .card:hover .profile-img {
+        transform: translateX(-50%) translateY(-30px) scale(1.1);
+      }
+
+      .card-content {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%) translateY(100%);
+        text-align: center;
+        color: #333;
+        opacity: 0;
+        transition: transform 0.4s ease, opacity 0.4s ease;
+        z-index: 3;
+      }
+
+      .card:hover .card-content {
+        transform: translateX(-50%) translateY(0);
+        opacity: 1;
+      }
+
+      .card-content h2 {
+        margin: 10px 0;
+        font-size: 1.4rem;
+      }
+
+      .card-content p {
+        font-size: 0.9rem;
+        color: #555;
+      }
+    </style>
+
+    <script>
+      window.addEventListener('scroll', function() {
+        let scrollPos = window.scrollY;
+        document.body.style.backgroundPosition = 'center ' + (scrollPos * 0.3) + 'px';
+      });
+    </script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const section = document.getElementById('section-buttons');
+        const dropdownItem = document.querySelector('.nav-item.dropdown');
+
+        if (!section || !dropdownItem) return;
+
+        const baseWidth = dropdownItem.offsetWidth;
+        dropdownItem.style.width = baseWidth + 'px';
+
+        const fadeRange = 200;
+        const offset = 467;
+
+
+
+        window.addEventListener('scroll', function () {
+          const sectionTop = section.offsetTop;
+          const scrollPos = window.scrollY;
+
+          const distance = (sectionTop - scrollPos) - offset;
+          let progress = distance <= fadeRange ? distance / fadeRange : 1;
+          if (progress < 0) progress = 0;
+
+          dropdownItem.style.opacity = progress;
+          dropdownItem.style.width = (baseWidth * progress) + "px";
+
+          if (progress < 1) {
+            dropdownItem.classList.add('disabled');
+          } else {
+            dropdownItem.classList.remove('disabled');
+          }
+        }, { passive: true });
+      });
+      
+    </script>
+
+  </head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-custom fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <img src="./img/serviam.png" alt="Logo" width="30" height="30" class="d-inline-block align-text-top">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+            aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+        <li class="nav-item">
+          <a class="nav-link active fw-bold" aria-current="page" href="index.html">Beranda</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active fw-bold" href="tentangkami.html">Tentang Kami</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle fw-bold" href="#" role="button"
+             data-bs-toggle="dropdown" aria-expanded="false">
+            Pelajari
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="pkn.html">Hukum dan Tindak Lanjut</a></li>
+            <li><a class="dropdown-item" href="agama.html">Kritikan Pihak yang Meragukan Ketiadaan Trauma</a></li>
+            <li><a class="dropdown-item" href="sejarah.html">Kehidupan Krisis Tragedi 1998</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="daftarpustaka.html"><b>Daftar Pustaka</b></a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="pkwu.html">Produk</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="content-box" style="color:white">
+<!-- Content -->
+<p class="lead fs-1 p-5 pb-0 ms-4 mt-2 mb-5 text-center" style="font-family: 'georgia', serif">
+  TENTANG KAMI
+</p>
+<hr class="title-divider">
+
+<p class="lead fs-2 p-5 pb-3 pt-4 ms-4 mb-0 text-center" style="font-family: 'georgia', serif">
+  Tujuan Kami
+</p>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-7">
+      <div class="hover-paragraph p-3 pb-2 my-3 mx-5">
+        <p class="lead fs-5 p-1 pt-3 ms-4 me-1 pe-0" style="text-align:right; font-family: 'Times', serif">
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pembuatan website ini bertujuan untuk merefleksikan kembali realita ketidakadilan yang dialami masyarakat etnis Tionghoa, khususnya terkait pelanggaran Hak Asasi Manusia yang terjadi pada salah satu contoh yang kami ambil adalah peristiwa tahun 1998. Melalui platform ini, kami ingin mengajak pengunjung untuk lebih memahami bahwa diskriminasi tidak pernah sejalan dengan nilai-nilai luhur bangsa Indonesia. Website ini diharapkan dapat menjadi pengingat bahwa setiap warga negara memiliki peran penting dalam menegakkan keadilan, menghargai keberagaman, serta menjunjung tinggi nilai kemanusiaan. Selain itu, proses pengembangan proyek ini menjadi sarana bagi kami untuk belajar bekerja sama, berkontribusi lintas mata pelajaran, dan mengaplikasikan pengetahuan dalam bentuk karya digital yang informatif, kreatif, dan bermanfaat bagi masyarakat.
+        </p>
+      </div>
+    </div>
+    <div class="col-md-4 mt-4">
+      <img src="./img/selfies/TEAM.png" alt="Tragedi 1998" style="width:420px; height:500px;">
+    </div>
+  </div>
+</div>
+
+<hr class="title-divider">
+<!-- Profiles -->
+<p class="lead fs-2 p-5 ms-4 mt-2 text-center" style="font-family: 'georgia', serif">
+  Kelompok X5 - 10
+</p>
+
+<div class="card-container">
+<div class="container">
+  <div class="row justify-content-center">
+
+    <div class="card col-md-4 mx-3">
+      <img src="./img/selfies/ryanbg.jpg" class="background" alt="Background">
+      <img src="./img/selfies/bourne.png" class="profile-img" alt="Profile">
+      <div class="card-content">
+        <h2 style="color:white">Ryan Kinly</h2>
+        <p style="color:white">Pemimpin Tim, Penulis Konten Web</p>
+      </div>
+    </div>
+
+    <div class="card col-md-4 mx-3">be
+      <img src="./img/selfies/giobg.jpg" class="background" alt="Background">
+      <img src="./img/selfies/ae.png" class="profile-img" alt="Profile">
+      <div class="card-content">
+        <h2 style="color:white">Gio</h2>
+        <p style="color:white">Developer Web</p>
+      </div>
+    </div>
+
+    <div class="card col-md-4 mx-3">
+      <img src="./img/selfies/jolynbg.jpeg" class="background" alt="Background">
+      <img src="./img/selfies/Jolyne.png" class="profile-img" alt="Profile">
+      <div class="card-content">
+        <h2 style="color:white">Joleanne</h2>
+        <p style="color:white">Penulis Konten Web</p>
+      </div>
+    </div>
+  </div>
+
+<div class="container px-5">
+<div class="hover-paragraph p-3 pb-2 my-3 mt-5 px-5 mx-4">
+  <p class="lead fs-5 p-1 pt-2 mx-2" style="text-align:justify; font-family: 'Times', serif">
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Perkenalkan, kelompok kami terdiri 3 anggota yang bekerja sama untuk menciptakan hasil yang terbaik! Dengan profesi yang berbeda-beda kami saling melengkapi dalam proses pembuatan proyek ini. Mulai dari Ryan Bourne Kinly Tan, Giovanni Ferarri Walintukan, dan Joleane Jennifer Japutra. Kami berasal dari Jakarta, Indonesia dan berusia 15 tahun. Kami bertiga merupakan siswa-siswi SMA Santa Theresia dari kelas X5.
+  </p>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+
+<footer class="footer-solid">
+  <div class="container">
+    <h3>Contact Information</h3>
+    <p>Email: <a href="mailto:giowalintukan77@gmail.com">giowalintukan77@gmail.com</a></p>
+    <p>No. HP: +62 811 1300 177</p>
+    <p>
+      <a href="tentangkami.html">Tentang Kami</a> | 
+      <a href="daftarpustaka.html">Daftar Pustaka</a>
+    </p>
+    <div class="container p-5 pe-5 text-center" style="color: white">
+    <p class="lead fs-4 p-1 pt-0" style="font-family: 'Trebuchet MS', Helvetica, sans-serif">
+      ” Menjadi Pemimpin yang Peduli, Kreatif dan Berwawasan Global “
+    </p>
+    </div>
+  </div>
+</footer>
+
+</body>
+
+</html>
